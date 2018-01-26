@@ -16,12 +16,12 @@
   limitations under the License.
 =end
 
-module Viewpoint
-  module EWS
-    attr_reader :logger
-
-    def self.root_logger
-      Logging.logger.root
-    end
-  end # EWS
-end
+# module Viewpoint
+#   module EWS
+#     attr_reader :logger
+#
+#     def self.root_logger
+#       Logging.logger.root
+#     end
+#   end # EWS
+# end

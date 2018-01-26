@@ -16,9 +16,9 @@
   limitations under the License.
 =end
 
-module Viewpoint
-  module EWS
-    Logging.logger.root.level = :debug
-    Logging.logger.root.appenders = Logging.appenders.stdout
-  end # EWS
-end
+# module Viewpoint
+#   module EWS
+#     Logging.logger.root.level = :debug
+#     Logging.logger.root.appenders = Logging.appenders.stdout
+#   end # EWS
+# end

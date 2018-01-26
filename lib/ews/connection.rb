@@ -33,7 +33,7 @@ class Viewpoint::EWS::Connection
   # @option opts [Array]  :trust_ca an array of hashed dir paths or a file
   # @option opts [String] :user_agent the http user agent to use in all requests
   def initialize(endpoint, opts = {})
-    @log = Logging.logger[self.class.name.to_s.to_sym]
+    # @log = Logging.logger[self.class.name.to_s.to_sym]
     if opts[:user_agent]
       @httpcli = HTTPClient.new(agent_name: opts[:user_agent])
     else
@@ -79,12 +79,12 @@ class Viewpoint::EWS::Connection
   # @param opts [Hash] misc opts for handling the Response
   def dispatch(ews, soapmsg, opts)
     respmsg = post(soapmsg)
-    @log.debug <<-EOF.gsub(/^ {6}/, '')
-      Received SOAP Response:
-      ----------------
-      #{Nokogiri::XML(respmsg).to_xml}
-      ----------------
-    EOF
+    # @log.debug <<-EOF.gsub(/^ {6}/, '')
+    #   Received SOAP Response:
+    #   ----------------
+    #   #{Nokogiri::XML(respmsg).to_xml}
+    #   ----------------
+    # EOF
     opts[:raw_response] ? respmsg : ews.parse_soap_response(respmsg, opts)
   end
 
@@ -133,7 +133,7 @@ class Viewpoint::EWS::Connection
     ns = ndoc.collect_namespaces
     err_string  = ndoc.xpath("//faultstring",ns).text
     err_code    = ndoc.xpath("//faultcode",ns).text
-    @log.debug "Internal SOAP error. Message: #{err_string}, Code: #{err_code}"
+    # @log.debug "Internal SOAP error. Message: #{err_string}, Code: #{err_code}"
     [err_string, err_code]
   end
 

@@ -21,13 +21,13 @@ require 'date'
 require 'base64'
 require 'nokogiri'
 require 'ostruct'
-require 'logging'
+# require 'logging'
 
 # String utilities
 require 'viewpoint/string_utils'
 
 # Load the logging setup
-require 'viewpoint/logging'
+# require 'viewpoint/logging'
 
 # Load the Exception classes
 require 'ews/exceptions/exceptions'
@@ -88,23 +88,23 @@ require 'ews/types/out_of_office'
 require 'ews/types/export_items_response_message'
 require 'ews/types/post_item'
 
-# Events
-require 'ews/types/event'
-require 'ews/types/copied_event'
-require 'ews/types/created_event'
-require 'ews/types/deleted_event'
-require 'ews/types/free_busy_changed_event'
-require 'ews/types/modified_event'
-require 'ews/types/moved_event'
-require 'ews/types/new_mail_event'
-require 'ews/types/status_event'
-
-# Template Objects
-require 'ews/templates/message'
-require 'ews/templates/forward_item'
-require 'ews/templates/reply_to_item'
-require 'ews/templates/calendar_item'
-require 'ews/templates/task'
+# # Events
+# require 'ews/types/event'
+# require 'ews/types/copied_event'
+# require 'ews/types/created_event'
+# require 'ews/types/deleted_event'
+# require 'ews/types/free_busy_changed_event'
+# require 'ews/types/modified_event'
+# require 'ews/types/moved_event'
+# require 'ews/types/new_mail_event'
+# require 'ews/types/status_event'
+#
+# # Template Objects
+# require 'ews/templates/message'
+# require 'ews/templates/forward_item'
+# require 'ews/templates/reply_to_item'
+# require 'ews/templates/calendar_item'
+# require 'ews/templates/task'
 
 # The proxy between the models and the web service
 require 'ews/ews_client'
