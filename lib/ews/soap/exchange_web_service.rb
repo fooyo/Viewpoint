@@ -46,6 +46,10 @@ module Viewpoint::EWS::SOAP
       @impersonation_address = ""
     end
 
+    def disconnect
+      @connection.disconnect
+    end
+
     def delete_attachment
       action = "#{SOAP_ACTION_PREFIX}/DeleteAttachment"
       resp = invoke("#{NS_EWS_MESSAGES}:DeleteAttachment", action) do |delete_attachment|

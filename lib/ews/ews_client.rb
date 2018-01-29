@@ -51,6 +51,10 @@ class Viewpoint::EWSClient
     @ews = SOAP::ExchangeWebService.new(con, opts)
   end
 
+  def disconnect
+    @ews.disconnect
+  end
+
   # @param deepen [Boolean] true to autodeepen, false otherwise
   # @param behavior [Symbol] :raise, :nil When setting autodeepen to false you
   #   can choose what the behavior is when an attribute does not exist. The

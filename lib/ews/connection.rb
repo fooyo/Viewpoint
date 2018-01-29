@@ -56,6 +56,10 @@ class Viewpoint::EWS::Connection
     @endpoint = endpoint
   end
 
+  def disconnect
+    @httpcli.reset_all
+  end
+
   def set_auth(user,pass)
     @httpcli.set_auth(@endpoint.to_s, user, pass)
   end
